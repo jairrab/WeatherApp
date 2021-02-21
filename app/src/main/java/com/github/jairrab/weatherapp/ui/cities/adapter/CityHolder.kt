@@ -44,7 +44,8 @@ class CityHolder(
         binding.favorite.isInvisible = !item.isFavorite
     }
 
-    private fun updateBackground(item: WeatherCity) {val color = when {
+    private fun updateBackground(item: WeatherCity) {
+        val color = when {
             item.temperature < 0 -> "#1976D2"
             item.temperature >= 0 && item.temperature < 15 -> "#26C6DA"
             item.temperature >= 15 && item.temperature < 30 -> "#66BB6A"

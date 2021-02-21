@@ -20,7 +20,7 @@ class CitiesAdapter(
         holder.update(getItem(position))
     }
 
-    companion object A : DiffUtil.ItemCallback<WeatherCity>() {
+    private companion object A : DiffUtil.ItemCallback<WeatherCity>() {
         override fun areItemsTheSame(oldItem: WeatherCity, newItem: WeatherCity): Boolean {
             return oldItem.cityId == newItem.cityId
         }
