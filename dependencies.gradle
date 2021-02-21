@@ -12,238 +12,65 @@ ext {
 
     //Version numbers
     androidHiltCompiler = '1.0.0-alpha03'
-//    androidHiltLifecycle = '1.0.0-alpha03'
-//    androidHiltWorkManager = '1.0.0-alpha03'
     androidJUnit = '1.1.2'
-//    androidUtilities = '2.4.2'
     androidXArchTest = '2.1.0'
-//    androidxLegacySupport = '1.0.0'
     androidXTest = '1.3.0'
-//    androidxTestRunner = '1.3.0'
     appcompat = '1.2.0'
-//    autoLabelUi = '1.0.1'
-//    barCodeScanning = '16.1.1'
-//    billing_version = '3.0.0'
-//    billingLibraryKtx = '3.0.0'
-//    billingutilities = '1.1.0'
-//    butterknife = '10.2.3'
-//    calculator = '3.4.0'
-//    cardview = '1.0.0'
     connectivity = '1.0.1'
     constraintlayout = '2.0.4'
     coreKtx = '1.3.2'
     coroutines = '1.3.9-native-mt-2'
-//    countryflags = '1.0.0'
-//    crashreporter = '1.1.0'
-//    crashylitics = '2.2.0'
-//    currencySymbols = '1.3.1'
-//    currencyUtility = '1.4.1'
-//    dagger = '2.29.1'
-//    daggerAndroid = '2.28.3'
-//    daggerCompiler = '2.29.1'
     daggerHilt = '2.32-alpha'
     daggerHiltCompiler = '2.32-alpha'
-//    daggerProcessor = '2.28.3'
-//    datelibrary = '1.4.0'
-//    desugarJdk = '1.1.1'
-//    dropbox = '3.1.5'
     espresso = '3.3.0'
-//    fadingEdge = '1.0.0'
-//    fastBle = '2.3.4'
-//    filePicker = '1.1.1'
-//    fileUtilities = '1.1.0'
-//    firebaseAds = '19.4.0'
-//    firebaseAnalytics = '17.5.0'
-//    firebaseBom = '26.1.1'
-//    firebaseCore = '17.5.0'
-//    firebaseCrashlytics = '17.2.1'
-//    fragmentVersion = '1.2.5'
-//    glide = '4.12.0'
-//    googleAds = '19.4.0'
-//    googleAnalytics = '17.0.0'
-//    googleApiClientAndroid = '1.30.10'
-//    googleApiServicesDrive = 'v3-rev99-1.23.0'
-//    googleDrive = '17.0.0'
-//    googlePlayServices = '18.1.0'
-//    googleServicesVersion = '4.3.3'
-//    gradleVersion = '4.1.0-rc03'
     gson = '2.8.6'
-//    imageUtilities = '1.8.0'
     javaxInject = '1'
     jUnit = '4.13.1'
-//    kotlinSerialization = '1.0-M1-1.4.0-rc'
-//    leakCanary = '2.5'
     lifecycle = '2.2.0'
-//    localbroadcastmanager = '1.0.0'
-//    materialCalendar = '2.0.1'
     materialLibrary = '1.3.0'
-//    mathUtils = '1.0.0'
-//    microsoftAdal = '1.16.0'
-//    microsoftAuth = '0.8.6'
-//    microsoftGraph = '1.7.1'
-//    microsoftMsal = '2.0.1'
-//    mockitoInline = '2.13.0'
-//    mpAndroidChart = 'v3.1.0-alpha'
-//    msGraph = '1.7.0'
-//    multidex = '2.0.1'
-//    multiFab = '1.6.4'
     navigation = '2.3.3'
-//    numberLibrary = '1.5.1'
-//    objectDetection = '16.2.2'
-//    objectDetectionCustom = '16.3.0'
     okhttp = '5.0.0-alpha.2'
     okhttpLogger = '5.0.0-alpha.2'
-//    oneDrive = '1.3.1'
-//    openCsv = '5.2'
-//    piracyChecker = '1.2.5'
-//    preference = '1.1.1'
-//    rateThisApp = '1.1.3'
-//    recyclerview = '1.1.0'
     retrofit = '2.9.0'
     retrofitGson = '2.9.0'
-//    retrofitScalar = '2.9.0'
     robolectric = '4.5.1'
     room = '2.2.6'
-//    rxJava = '2.2.19'
-//    rxJavaAndroid = '2.1.1'
-//    safutilities = '1.4.0'
-//    signaturePad = '1.3.1'
-//    spinKit = '1.4.0'
     swipeRefreshLayout = '1.1.0'
-//    threeTenAbp = '1.2.4'
     timber = '4.7.1'
-//    viewBindingUtility = '1.0.1'
-//    volley = '1.1.1'
-//    workManager = '2.5.0'
-//    zxing = '3.4.1'
 
     library = [
             androidHiltCompiler: "androidx.hilt:hilt-compiler:$androidHiltCompiler",
-//            androidHiltLifecycle   : "androidx.hilt:hilt-lifecycle-viewmodel:$androidHiltLifecycle",
-//            androidHiltWorkManager : "androidx.hilt:hilt-work:$androidHiltWorkManager",
             androidJUnit       : "androidx.test.ext:junit:$androidJUnit",
-//            androidUtilities       : "com.github.jairrab:androidUtilities:$androidUtilities",
-            androidXArchTest       : "androidx.arch.core:core-testing:$androidXArchTest",
-//            androidxLegacySupport  : "androidx.legacy:legacy-support-v4:$androidxLegacySupport",
-            androidXTest           : "androidx.test:core:$androidXTest",
-//            androidxTestRunner     : "androidx.test:runner:$androidxTestRunner",
+            androidXArchTest   : "androidx.arch.core:core-testing:$androidXArchTest",
+            androidXTest       : "androidx.test:core:$androidXTest",
             appCompat          : "androidx.appcompat:appcompat:$appcompat",
-//            autoLabelUi            : "com.github.davidpizarro:autolabelui:$autoLabelUi",
-//            barCodeScanning        : "com.google.mlkit:barcode-scanning:$barCodeScanning",
-//            billingLibrary         : "com.android.billingclient:billing:$billing_version",
-//            billingLibraryKtx      : "com.android.billingclient:billing-ktx:$billingLibraryKtx",
-//            billingutilities       : "com.github.jairrab:BillingUtilities:$billingutilities",
-//            butterknife            : "com.jakewharton:butterknife:$butterknife",
-//            butterknifeCompiler    : "com.jakewharton:butterknife-compiler:$butterknife",
-//            calculator             : "com.github.jairrab:KotlinCalculator:$calculator",
-//            cardView               : "androidx.cardview:cardview:$cardview",
             connectivity       : "com.github.jairrab:Connectivity:$connectivity",
             constraintLayout   : "androidx.constraintlayout:constraintlayout:$constraintlayout",
             coreKtx            : "androidx.core:core-ktx:$coreKtx",
-//            coroutines             : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines",
             coroutinesAndroid  : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines",
-//            countryflags           : "com.github.jairrab:CountryFlags:$countryflags",
-//            crashlytics            : "com.crashlytics.sdk.android:crashlytics:2.10.1@aar",
-//            crashreporter          : "com.balsikandar.android:crashreporter:$crashreporter",
-//            currencySymbols        : "com.github.jairrab:CurrencySymbols:$currencySymbols",
-//            currencyUtility        : "com.github.jairrab:CurrencyUtility:$currencyUtility",
-//            dagger                 : "com.google.dagger:dagger:$dagger",
-//            daggerAndroid          : "com.google.dagger:dagger-android-support:$daggerAndroid",
-//            daggerCompiler         : "com.google.dagger:dagger-compiler:$daggerCompiler",
             daggerHilt         : "com.google.dagger:hilt-android:$daggerHilt",
             daggerHiltCompiler : "com.google.dagger:hilt-android-compiler:$daggerHiltCompiler",
-//            daggerProcessor        : "com.google.dagger:dagger-android-processor:$daggerProcessor",
-//            datelibrary            : "com.github.jairrab:AndroidDateLibrary:$datelibrary",
-//            desugarJdk             : "com.android.tools:desugar_jdk_libs:$desugarJdk",
-//            dropbox                : "com.dropbox.core:dropbox-core-sdk:$dropbox",
             espresso           : "androidx.test.espresso:espresso-core:$espresso",
-//            fadingEdge             : "com.github.bosphere.android-fadingedgelayout:fadingedgelayout:$fadingEdge",
-//            fastBle                : "com.clj.fastble:FastBleLib:$fastBle",
-//            filePicker             : "com.github.angads25:filepicker:$filePicker",
-//            fileUtilities          : "com.github.jairrab:FileUtilities:$fileUtilities",
-//            firebaseAds            : "com.google.firebase:firebase-ads:$firebaseAds",
-//            firebaseAnalytics      : "com.google.firebase:firebase-analytics-ktx:$firebaseAnalytics",
-//            firebaseAnalyticsBom   : "com.google.firebase:firebase-analytics-ktx",
-//            firebaseBom            : "com.google.firebase:firebase-bom:$firebaseBom",
-//            firebaseCore           : "com.google.firebase:firebase-core:$firebaseCore",
-//            firebaseCrashlyticsBom : "com.google.firebase:firebase-crashlytics-ktx",
-//            firebaseCrashylitics   : "com.google.firebase:firebase-crashlytics:$firebaseCrashlytics",
-//            firebaseCrashyliticsKtx: "com.google.firebase:firebase-crashlytics-ktx:$firebaseCrashlytics",
-//            fragment               : "androidx.fragment:fragment:$fragmentVersion",
-//            fragmentKtx            : "androidx.fragment:fragment-ktx:$fragmentVersion",
-//            glide                  : "com.github.bumptech.glide:glide:$glide",
-//            glideCompiler          : "com.github.bumptech.glide:compiler:$glide",
-//            googleAds              : "com.google.android.gms:play-services-ads:$googleAds",
-//            googleAnalytics        : "com.google.android.gms:play-services-analytics:$googleAnalytics",
-//            googleApiAndroidClient : "com.google.api-client:google-api-client-android:$googleApiClientAndroid",
-//            googleDrive            : "com.google.android.gms:play-services-drive:$googleDrive",
-//            googleDriveServices    : "com.google.apis:google-api-services-drive:$googleApiServicesDrive",
-//            googlePlayServices     : "com.google.android.gms:play-services-auth:$googlePlayServices",
             gson               : "com.google.code.gson:gson:$gson",
-//            imageUtilities         : "com.github.jairrab:ImageUtilities:$imageUtilities",
             javaxInject        : "javax.inject:javax.inject:$javaxInject",
             jUnit              : "junit:junit:$jUnit",
             kotlinLib          : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
-//            kotlinSerialization    : "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$kotlinSerialization",
-//            leakCanary             : "com.squareup.leakcanary:leakcanary-android:$leakCanary",
             lifecycle          : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle",
-            lifecycleJava8     : "androidx.lifecycle:lifecycle-common-java8:$lifecycle",
             lifecycleExtensions: "androidx.lifecycle:lifecycle-extensions:$lifecycle",
-//            liveDataKtx            : "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle",
-//            localbroadcastmanager  : "androidx.localbroadcastmanager:localbroadcastmanager:$localbroadcastmanager",
-//            materialCalendar       : "com.github.prolificinteractive:material-calendarview:$materialCalendar",
-            materialLibrary    : "com.google.android.material:material:$materialLibrary", //check snackbar when updating
-//            materialShowCase       : "com.github.deano2390:MaterialShowcaseView:1.3.4",
-//            mathUtils              : "com.github.jairrab:MathUtils:$mathUtils",
-//            microsoftAdal          : "com.microsoft.aad:adal:$microsoftAdal",
-//            microsoftAuth          : "com.microsoft.services.msa:msa-auth:$microsoftAuth",
-//            microsoftGraph         : "com.microsoft.graph:microsoft-graph:$microsoftGraph",
-//            microsoftMsal          : "com.microsoft.identity.client:msal:$microsoftMsal",
-//            mockitoInline    : "org.mockito:mockito-inline:$mockitoInline",
+            lifecycleJava8     : "androidx.lifecycle:lifecycle-common-java8:$lifecycle",
+            materialLibrary    : "com.google.android.material:material:$materialLibrary",
             mockitoKotlin      : "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0",
-//            mpAndroidChart         : "com.github.PhilJay:MPAndroidChart:$mpAndroidChart",
-//            mpAndroidChartJairrab  : "com.github.jairrab:MPAndroidChart:master-SNAPSHOT",
-//            msGraph                : "com.microsoft.graph:msgraph-sdk-android:$msGraph",
-//            multidex               : "androidx.multidex:multidex:$multidex",
-//            multiFab               : "com.github.clans:fab:$multiFab",
-//            multiselectrecyclerview: "com.github.aolivafaura:recyclerview-multiselect:master-SNAPSHOT",
             navigationFragment : "androidx.navigation:navigation-fragment-ktx:$navigation",
-//            navigationUi           : "androidx.navigation:navigation-ui-ktx:$navigation",
-//            numberLibrary          : "com.github.jairrab:NumberLibrary:$numberLibrary",
-//            objectDetection        : "com.google.mlkit:object-detection:$objectDetection",
-//            objectDetectionCustom  : "com.google.mlkit:object-detection-custom:$objectDetectionCustom",
             okhttp             : "com.squareup.okhttp3:okhttp:$okhttp",
             okhttpLogger       : "com.squareup.okhttp3:logging-interceptor:$okhttpLogger",
-//            omadaRippleEffect      : "com.github.traex.rippleeffect:ripple:1.3.1-OG",
-//            omadaTypeface          : "com.github.omadahealth.typefaceview:typefaceview:2.0.1",
-//            oneDrive               : "com.onedrive.sdk:onedrive-sdk-android:$oneDrive",
-//            openCsv                : "com.opencsv:opencsv:$openCsv",
-//            piracyChecker          : "com.github.javiersantos:PiracyChecker:$piracyChecker",
-//            preferences            : "androidx.preference:preference:$preference",
-//            rateThisApp            : "io.github.kobakei:ratethisapp:$rateThisApp",
-//            recyclerView           : "androidx.recyclerview:recyclerview:$recyclerview",
             retrofit           : "com.squareup.retrofit2:retrofit:$retrofit",
             retrofitGson       : "com.squareup.retrofit2:converter-gson:$retrofitGson",
-//            retrofitScalar         : "com.squareup.retrofit2:converter-scalars:$retrofitScalar",
-            robolectric            : "org.robolectric:robolectric:$robolectric",
+            robolectric        : "org.robolectric:robolectric:$robolectric",
             room               : "androidx.room:room-runtime:$room",
             roomCompiler       : "androidx.room:room-compiler:$room",
             roomKtx            : "androidx.room:room-ktx:$room",
-//            roomRxJava             : "androidx.room:room-rxjava2:$room",
-//            rxJava                 : "io.reactivex.rxjava2:rxjava:$rxJava",
-//            rxJavaAndroid          : "io.reactivex.rxjava2:rxandroid:$rxJavaAndroid",
-//            safutilities           : "com.github.jairrab:SafUtilities:$safutilities",
-//            segmentedControl       : "info.hoang8f:android-segmented:1.0.6",
-//            signaturePad           : "com.github.gcacace:signature-pad:$signaturePad",
-//            simpleToolTip          : "com.github.douglasjunior:android-simple-tooltip:0.2.3",
-//            spinKit                : "com.github.ybq:Android-SpinKit:$spinKit",
             swipeRefreshLayout : "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayout",
-//            threeTenAbp            : "com.jakewharton.threetenabp:threetenabp:$threeTenAbp",
             timber             : "com.jakewharton.timber:timber:$timber",
-//            viewBindingUtility     : "com.github.jairrab:viewBindingUtility:$viewBindingUtility",
             viewModel          : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle",
-//            volley                 : "com.android.volley:volley:$volley",
-//            workManager            : "androidx.work:work-runtime-ktx:$workManager",
-//            zxing                  : "com.google.zxing:core:$zxing",
     ]
 }
