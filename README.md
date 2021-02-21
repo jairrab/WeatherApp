@@ -30,10 +30,11 @@ For the chosen architecture, please refer to the following diagram which is take
 ## Testing
 An example of unit testings are included on the following modules
 * ViewModel
-** Checks the state of the `LiveData` observables during a successful, failed or error API calls.
+    * Checks the state of the `LiveData` observables during a successful, failed or error API calls.
 * Repository
-** Checks that the repository class receives the API call from the web service and thereafter saves it to the local database with the expected transformation, including making sure that the favorite settings is properly re-applied to the data set received from remote.
-** Checks that the list of cities supplied to web service in string format is properly formatted
-** Checks that the mapper function works as expected by transforming the API response into model entities
+    * Checks that the repository class receives the API call from the web service and thereafter saves it to the local database with the expected transformation, including making sure that the favorite settings is properly re-applied to the data set received from remote.
+    * Checks that the list of cities supplied to web service in string format is properly formatted
+    * Checks that the mapper function works as expected by transforming the API response into model entities
 * Model
-** Checks the `Room` database to make sure that saving cities and thereafter adding a new city is then collected successfully from the `Flow` data observables
+    * Checks to make sure saving a new city to the database is retrieved succesfully
+    * Checks the `Room` database to make sure that saving cities and thereafter adding a new city is then collected successfully from the `Flow` data observables
