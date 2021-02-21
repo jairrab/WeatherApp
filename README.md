@@ -27,3 +27,13 @@ For the chosen architecture, please refer to the following diagram which is take
 ### Remote Layer
 * This module is responsible for interacting with the weather map API service using `Retrofit`.
 * The API responses is not propagated directly to the view and view models. This setup decouples API responses from the rest of the application, minimizing changes to the ViewModels everytime the API model changes.
+## Testing
+An example of unit testings are included on the following modules
+* ViewModel
+** Checks the state of the `LiveData` observables during a successful, failed or error API calls.
+* Repository
+** Checks that the repository class receives the API call from the web service and thereafter saves it to the local database with the expected transformation, including making sure that the favorite settings is properly re-applied to the data set received from remote.
+** Checks that the list of cities supplied to web service in string format is properly formatted
+** Checks that the mapper function works as expected by transforming the API response into model entities
+* Model
+** Checks the `Room` database to make sure that saving cities and thereafter adding a new city is then collected successfully from the `Flow` data observables
