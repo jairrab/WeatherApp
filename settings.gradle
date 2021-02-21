@@ -1,0 +1,6 @@
+include ':remote'
+include ':model'
+include ':repository'
+include ':viewmodel'
+include ':app'
+rootProject.name = "Weather App"

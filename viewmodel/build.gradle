@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.javaCompatibility
+        targetCompatibility rootProject.javaCompatibility
+    }
+    kotlinOptions {
+        jvmTarget = rootProject.jvmTarget
+    }
+}
+
+dependencies {
+    api project(":repository")
+
+    implementation library.coreKtx
+    implementation library.kotlinLib
+    implementation library.timber
+    implementation library.viewModel
+
+    implementation library.daggerHilt
+    kapt library.androidHiltCompiler
+    kapt library.daggerHiltCompiler
+
+    testImplementation library.androidXArchTest
+    testImplementation library.androidXTest
+    testImplementation library.jUnit
+    testImplementation library.mockitoKotlin
+    testImplementation library.robolectric
+}

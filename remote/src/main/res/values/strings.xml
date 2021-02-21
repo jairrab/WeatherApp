@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="base_url">https://api.openweathermap.org/</string>
+    <string name="weather_map_api_key">a0d31d9a6674d186a5385a07187717f6</string>
+    <!--<string name="weather_map_api_key">d0bced6967aab3ec202e30e278d6685a</string>-->
+</resources>
