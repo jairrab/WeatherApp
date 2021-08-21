@@ -6,7 +6,6 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavOptions
@@ -14,7 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.github.jairrab.weatherapp.R
 import timber.log.Timber
 
-abstract class BaseFragment(@LayoutRes resId: Int) : Fragment(resId) {
+abstract class BaseFragment() : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val clazz = javaClass.simpleName
