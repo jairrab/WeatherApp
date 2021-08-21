@@ -49,6 +49,7 @@ class CitiesViewModel @Inject constructor(
     }
 
     fun pullToRefresh() = viewModelScope.launch {
+        _swipeRefreshVisibilityLd.value = true
         updateCities()
         delay(250)
         _swipeRefreshVisibilityLd.value = false
