@@ -69,84 +69,79 @@ class CitiesFragment : BaseFragment() {
     }
 }
 
-
 @Composable
-fun Cities(viewModel: CitiesViewModel, action: (WeatherCity) -> Unit) {
-    ConstraintLayout {
-        val (list, spinner) = createRefs()
+fun Cities(viewModel: CitiesViewModel, action: (WeatherCity) -> Unit) = ConstraintLayout {
+    val (list, spinner) = createRefs()
 
-        val data by viewModel.citiesLd.observeAsState(emptyList())
-        val spinnerVisibility by viewModel.bottomSpinnerVisibilityLd.observeAsState(false)
-        val swipeRefreshVisibility by viewModel.swipeRefreshVisibilityLd.observeAsState(false)
+    val data by viewModel.citiesLd.observeAsState(emptyList())
+    val spinnerVisibility by viewModel.bottomSpinnerVisibilityLd.observeAsState(false)
+    val swipeRefreshVisibility by viewModel.swipeRefreshVisibilityLd.observeAsState(false)
 
-        SwipeRefresh(
-            state = rememberSwipeRefreshState(isRefreshing = swipeRefreshVisibility),
-            modifier = Modifier.constrainAs(list) {
-                top.linkTo(parent.top, margin = 16.dp)
-                bottom.linkTo(parent.bottom)
-                start.linkTo(parent.start)
-                end.linkTo(parent.end)
-                height = Dimension.fillToConstraints
-                width = Dimension.fillToConstraints
-            },
-            onRefresh = { viewModel.pullToRefresh() }
-        ) {
-            LazyColumn {
-                items(data) {
-                    WeatherRow(it, action)
-                }
+    SwipeRefresh(
+        state = rememberSwipeRefreshState(isRefreshing = swipeRefreshVisibility),
+        modifier = Modifier.constrainAs(list) {
+            top.linkTo(parent.top, margin = 16.dp)
+            bottom.linkTo(parent.bottom)
+            start.linkTo(parent.start)
+            end.linkTo(parent.end)
+            height = Dimension.fillToConstraints
+            width = Dimension.fillToConstraints
+        },
+        onRefresh = { viewModel.pullToRefresh() }
+    ) {
+        LazyColumn {
+            items(data) {
+                WeatherRow(it, action)
             }
         }
+    }
 
-        if (spinnerVisibility) {
-            CircularProgressIndicator(
-                modifier = Modifier.constrainAs(spinner) {
-                    bottom.linkTo(parent.bottom, margin = 16.dp)
-                    start.linkTo(parent.start)
-                    end.linkTo(parent.end)
-                })
-        }
+    if (spinnerVisibility) {
+        CircularProgressIndicator(
+            modifier = Modifier.constrainAs(spinner) {
+                bottom.linkTo(parent.bottom, margin = 16.dp)
+                start.linkTo(parent.start)
+                end.linkTo(parent.end)
+            })
     }
 }
 
 @Composable
-fun WeatherRow(city: WeatherCity, action: (WeatherCity) -> Unit) {
-    Column(
-        modifier = Modifier
-            .padding(16.dp)
-            .clickable { action(city) }
-            .fillMaxWidth()
-            .shadow(6.dp)
-            .background(Color(city.getBackgroundColor()), RoundedCornerShape(8.dp))
-            .padding(8.dp)
-    ) {
-        Row {
-            Text(
-                text = city.temperature.toString(),
-                fontSize = 30.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier
-                    .width(0.dp)
-                    .weight(1f)
-            )
-            if (city.isFavorite) {
-                Image(
-                    painterResource(R.drawable.ic_baseline_favorite_24),
-                    contentDescription = ""
-                )
-            }
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = city.cityName,
-                fontSize = 24.sp,
-                modifier = Modifier.padding(end = 16.dp)
-            )
-            Text(
-                text = city.weatherCondition.joinToString { it.main },
-                fontSize = 20.sp,
+fun WeatherRow(city: WeatherCity, action: (WeatherCity) -> Unit) = Column(
+    modifier = Modifier
+        .padding(16.dp)
+        .clickable { action(city) }
+        .fillMaxWidth()
+        .shadow(6.dp)
+        .background(Color(city.getBackgroundColor()), RoundedCornerShape(8.dp))
+        .padding(8.dp)
+) {
+    Row {
+        Text(
+            text = city.temperature.toString(),
+            fontSize = 30.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier
+                .width(0.dp)
+                .weight(1f)
+        )
+        if (city.isFavorite) {
+            Image(
+                painterResource(R.drawable.ic_baseline_favorite_24),
+                contentDescription = ""
             )
         }
+    }
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = city.cityName,
+            fontSize = 24.sp,
+            modifier = Modifier.padding(end = 16.dp)
+        )
+        Text(
+            text = city.weatherCondition.joinToString { it.main },
+            fontSize = 20.sp,
+        )
     }
 }
 
